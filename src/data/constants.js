@@ -11,7 +11,7 @@ export const Bio = {
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/abhiparmar1111/",
   resume:
-    "https://drive.google.com/file/d/1N9_qhVq3CNa3d1PLLyQEWHMoCJTMgSa8/view?usp=sharing",
+    "https://drive.google.com/file/d/1lRY1TwihiSNyRsEwcpDZKDjmXqZldvjC/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/abhayraj-parmar-266074253/",
 };
 
