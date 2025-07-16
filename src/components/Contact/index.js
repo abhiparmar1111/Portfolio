@@ -121,27 +121,28 @@ const Contact = () => {
   const form = useRef();
 
   const handleSubmit = (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  emailjs
-    .sendForm(
-      'service_bpej369',       // replace with EmailJS service ID
-      'template_tv48hbp',      // replace with EmailJS template ID
-      form.current,
-      '8csKngUc5UQxTzF-0' // replace with your EmailJS public key
-    )
-    .then(
-      (result) => {
-        console.log('SUCCESS!', result.text);
-        setOpen(true);
-        form.current.reset();
-      },
-      (error) => {
-        console.log('FAILED...', error.text);
-        alert('Failed to send message. Please try again later.');
-      }
-    );
-};
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,     // replace with EmailJS template ID
+        form.current,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY // replace with your EmailJS public key
+      )
+      .then(
+        (result) => {
+          console.log('SUCCESS!', result.text);
+          setOpen(true);
+          form.current.reset();
+        },
+        (error) => {
+          console.error('FAILED...', error);
+          alert(`Failed to send message: ${error?.text || error || "Unknown error"}`);
+        }
+
+      );
+  };
 
   return (
     <Container>
