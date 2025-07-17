@@ -161,7 +161,7 @@ const Contact = () => {
           open={open}
           autoHideDuration={4000}
           onClose={() => setOpen(false)}
-          message="Opening your email app..."
+          message="Your mail has been sent..."
           severity="success"
         />
       </Wrapper>
